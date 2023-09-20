@@ -1,0 +1,19 @@
+
+// literal type declaration
+type GenderType = 'Male' | 'Female';
+
+type PersonType = {
+  firstName: string,
+  lastName: string,
+  gender: GenderType,
+  getPersonInfo: () => void
+}
+
+const p1: PersonType = {
+  firstName: "John",
+  lastName: "Doe",
+  gender: "Male",
+  getPersonInfo() { return this.gender }
+}
+
+console.log(p1.getPersonInfo())
