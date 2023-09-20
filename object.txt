@@ -1,0 +1,23 @@
+// objects
+enum GenderType { Male = 'male', Female = 'female'}
+type Person = {
+  readonly id: number,
+  firstName: string,
+  lastName: string,
+  gender: GenderType.Male,
+  dateOfBirth: Date,
+  getInfo: () => void
+}
+
+const p1: Person = {
+  id: 0,
+  firstName: "John",
+  lastName: "Doe",
+  gender: GenderType.Male,
+  dateOfBirth: new Date("01/09/1995"),
+  getInfo: function (): string {
+    return this.firstName.concat(' ', this.lastName, ' dob:- ', this.dateOfBirth.toUTCString())
+  }
+}
+
+console.log(p1)
