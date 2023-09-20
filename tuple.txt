@@ -1,0 +1,15 @@
+// tuple: 
+// An array with fixed length. each element has a type.
+// mostly used in key value pairs
+
+// Ex-1 - tuple
+let user1: [number, string] = [1, 'John Doe']
+user1.forEach((e, i) => console.log(e))
+
+
+// Ex-2 tuple array
+let user2: [number, string][] = [
+  [1, 'John Doe'],
+  [2, 'James Smith']
+]
+user2.forEach((e, i) => console.log(e))
