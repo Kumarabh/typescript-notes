@@ -2,3 +2,12 @@
 
 let value: number | string;
 // we get the methods which is common to both number and string
+
+
+// nullable
+
+function greet(prefix: string, name: string | null): string {
+  return `${prefix}, ${name ?? 'John'}`
+}
+
+console.log(greet('hey', null)) // hey, john
