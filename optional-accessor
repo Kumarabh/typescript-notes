@@ -1,0 +1,23 @@
+// Optional property access operator
+
+function getPerson(): any{
+  return {
+    firstName: 'John',
+    lastName: 'Doe',
+  }
+}
+console.log(getPerson()?.gender)
+
+----------------------------------------------------------
+
+// Optional element access operator
+
+
+const arr: any[] = [];
+console.log(arr[0]?.firstName)
+
+----------------------------------------------------------
+// Optional call operator
+
+let log: any = null;
+log?.(); // call log, if it is a function
