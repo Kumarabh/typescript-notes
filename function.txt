@@ -1,0 +1,5 @@
+function calculateTax (income: number, year: number = 2023): number {
+  return year < 2020 ? income * .13 : income * .10
+}
+
+console.log(calculateTax(10000, 2024))
