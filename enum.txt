@@ -1,0 +1,22 @@
+enum UserRole { 
+  user = 'Normal User', 
+  admin = 'Admin User',
+  other = 'Others'
+}
+
+interface User {
+  firstName: string;
+  lastName: string;
+  gender: 'Male' | 'Female';
+  role: UserRole
+}
+
+const user: User = {
+  firstName: "John",
+  lastName: "Doe",
+  gender: "Male",
+  role: UserRole.user
+}
+
+user.firstName = 'James';
+console.log(user);
