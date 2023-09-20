@@ -1,0 +1,13 @@
+# array
+
+Ex-1
+// array of number or string
+const arr: ( number | string )[] = [1, 2, 3, 4, 5, 'test'];
+console.log(arr);
+
+for(let [index, element] of arr.entries()) {
+  if( typeof element === 'string') {
+    arr[index] = element.toUpperCase();
+  }
+}
+console.log(arr)
