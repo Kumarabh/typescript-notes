@@ -1,0 +1,4 @@
+// union
+
+let value: number | string;
+// we get the methods which is common to both number and string
