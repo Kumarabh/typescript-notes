@@ -1,0 +1,37 @@
+type PersonType = {
+  firstName: string,
+  lastName: string,
+  gender: 'Male' | 'Female',
+  getPersonInfo: () => void
+}
+
+type UserType = {
+  userId: number,
+  userName: string,
+  email: string,
+  getUserInfo: () => void
+}
+
+// intersection
+let employee: PersonType & UserType;
+
+// employee can access property and methods of both types
+// it's called intersection
+
+employee = {
+  firstName: 'John',
+  lastName: 'Doe',
+  gender: 'Male',
+  userId: 101,
+  userName: 'John101Doe',
+  email: '#',
+  getPersonInfo() {
+    return this.firstName + ' ' + this.lastName
+  },
+  getUserInfo() {
+    return this.userName
+  }
+}
+
+console.log('FullName:- ', employee.getPersonInfo())
+console.log('User Name:- ', employee.getUserInfo())
